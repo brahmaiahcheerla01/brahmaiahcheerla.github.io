@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Brahmaiah Cheerla | DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -19,9 +15,14 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth; /* smooth navigation scrolling */
+}
+
 body{
 background:#0b0f1a;
 color:white;
+line-height:1.6;
 }
 
 /* NAVBAR */
@@ -34,6 +35,7 @@ padding:20px 10%;
 background:#020617;
 position:sticky;
 top:0;
+z-index:100;
 }
 
 nav h2{
@@ -42,8 +44,8 @@ color:#6ea8ff;
 
 nav ul{
 display:flex;
-list-style:none;
 gap:25px;
+list-style:none;
 }
 
 nav a{
@@ -90,19 +92,6 @@ background:#6ea8ff;
 border-radius:6px;
 text-decoration:none;
 color:white;
-}
-
-/* scroll animation */
-
-.fade-section{
-opacity:0;
-transform:translateY(40px);
-transition:all 0.8s ease;
-}
-
-.fade-section.visible{
-opacity:1;
-transform:translateY(0);
 }
 
 /* SECTIONS */
@@ -295,6 +284,11 @@ color:white;
 cursor:pointer;
 }
 
+#form-status{
+margin-top:10px;
+font-size:14px;
+}
+
 /* FOOTER */
 
 footer{
@@ -304,9 +298,17 @@ background:#020617;
 margin-top:40px;
 }
 
-#form-status{
-margin-top:10px;
-font-size:14px;
+/* SCROLL ANIMATION */
+
+.fade-section{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.fade-section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
@@ -331,97 +333,40 @@ display:none;
 }
 
 }
-
 </style>
-
-<script>
-
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
-
-form.addEventListener("submit", async function(e) {
-
-e.preventDefault();
-
-const data = new FormData(form);
-
-const response = await fetch(form.action, {
-method: form.method,
-body: data,
-headers: {
-'Accept': 'application/json'
-}
-});
-
-if (response.ok) {
-
-status.innerHTML = "✅ Message sent successfully!";
-status.style.color = "#22c55e";
-
-form.reset();
-
-} else {
-
-status.innerHTML = "❌ Oops! Something went wrong.";
-status.style.color = "#ef4444";
-
-}
-
-});
-
-</script>
-
 </head>
 
 <body>
 
 <nav>
-
 <h2>Brahmaiah</h2>
-
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <div class="hero">
-
 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-
 <h1>Hi, I'm <span>Brahmaiah</span></h1>
-
 <p>DevOps Engineer | AWS | Docker | Kubernetes | Jenkins</p>
-
-<a href="Brahmaiah Cheerla (2).pdf" class="btn">Download Resume</a>
-
+<a href="resume.pdf" class="btn">Download Resume</a>
 </div>
 
 <section id="about" class="fade-section">
-
 <h2>About <span>Me</span></h2>
-
 <p>
-
 DevOps Engineer experienced in building and managing cloud infrastructure,
 automating CI/CD pipelines, and deploying containerized applications using Docker and Kubernetes.
-
-Skilled in AWS services, Terraform infrastructure automation,
-and monitoring systems using Prometheus and Grafana.
-
+Skilled in AWS services, Terraform infrastructure automation, and monitoring systems using Prometheus and Grafana.
 </p>
-
 </section>
 
 <section id="skills" class="fade-section">
-
 <h2>Skills</h2>
-
 <div class="skills">
-
 <div class="skill">AWS</div>
 <div class="skill">Linux</div>
 <div class="skill">Docker</div>
@@ -431,94 +376,51 @@ and monitoring systems using Prometheus and Grafana.
 <div class="skill">Git</div>
 <div class="skill">Prometheus</div>
 <div class="skill">Grafana</div>
-
 </div>
-
 </section>
 
-<section>
-
+<section class="fade-section">
 <h2>DevOps <span>Mindset</span></h2>
-
 <div class="mindset-grid">
-
-<div class="mind-card">
-<h3>Automate Everything</h3>
-<p>Eliminate manual processes through automation.</p>
+<div class="mind-card"><h3>Automate Everything</h3><p>Eliminate manual processes through automation.</p></div>
+<div class="mind-card"><h3>Infrastructure as Code</h3><p>Manage infrastructure using Terraform.</p></div>
+<div class="mind-card"><h3>Continuous Integration</h3><p>Integrate and deploy frequently.</p></div>
 </div>
-
-<div class="mind-card">
-<h3>Infrastructure as Code</h3>
-<p>Manage infrastructure using Terraform.</p>
-</div>
-
-<div class="mind-card">
-<h3>Continuous Integration</h3>
-<p>Integrate and deploy frequently.</p>
-</div>
-
-</div>
-
 </section>
 
 <section id="projects" class="fade-section">
-
 <h2>Projects</h2>
-
 <div class="projects">
-
 <div class="project">
 <h3>Blood Bank Management System</h3>
-<p>
-Built CI/CD pipelines using Jenkins, containerized applications with Docker,
-and deployed them to Kubernetes clusters.
-</p>
+<p>CI/CD pipeline using Jenkins, Docker containerization and Kubernetes deployment.</p>
 </div>
-
 </div>
-
 </section>
 
-<section>
-
+<section class="fade-section">
 <h2>Education</h2>
-
 <div class="edu-card">
-
 <h3>B.Sc – Mathematics, Electronics & Computer Science</h3>
 <p>Sree Chaitanya Degree College, Kavali</p>
 <p>2019</p>
-
 </div>
-
 </section>
 
-<section>
-
+<section class="fade-section">
 <h2>Medium</h2>
-
 <div class="blog">
-
 <p>I share DevOps tutorials and troubleshooting guides on Medium.</p>
-
-<a href="https://medium.com/@brahmaiahcheerla" target="_blank">
-Visit My Medium →
-</a>
-
+<a href="https://medium.com/@brahmaiahcheerla" target="_blank">Visit My Medium →</a>
 </div>
-
 </section>
 
-<section id="contact" class="fade-section">
-  
+<section id="contact" class="connect-section fade-section">
+
 <div class="connect-header">
-
 <span class="badge">• Get In Touch</span>
-
 <h2>Let’s <span>Connect</span></h2>
-
 <p>Ready to discuss DevOps solutions or career opportunities? Reach out!</p>
-
 </div>
 
 <div class="connect-container">
@@ -552,11 +454,8 @@ Visit My Medium →
 </div>
 
 <div style="margin-top:20px">
-
-<a href="Brahmaiah Cheerla (2).pdf" class="small-btn">Resume</a>
-
+<a href="resume.pdf" class="small-btn">Resume</a>
 <a href="https://linkedin.com/in/brahmaiah-cheerla" class="small-btn">LinkedIn</a>
-
 </div>
 
 </div>
@@ -565,17 +464,13 @@ Visit My Medium →
 
 <h3>Send a Message</h3>
 
-<form id="contact-form" action="https://formspree.io/f/mqeyazge" method="POST">
+<form id="contact-form" action="https://formspree.io/f/meerojlz" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
-
 <input type="email" name="email" placeholder="Your Email" required>
-
 <input type="text" name="subject" placeholder="Subject">
-
 <textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
 
-<!-- Spam protection -->
 <input type="text" name="_gotcha" style="display:none">
 
 <button type="submit" class="send-btn">Send Message</button>
@@ -591,11 +486,54 @@ Visit My Medium →
 </section>
 
 <footer>
-
 <p>© 2026 Brahmaiah Cheerla | DevOps Engineer</p>
-
 </footer>
 
-</body>
+<script>
 
+/* Formspree AJAX submit */
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async function(e) {
+
+e.preventDefault();
+
+const data = new FormData(form);
+
+const response = await fetch(form.action, {
+method: form.method,
+body: data,
+headers:{ 'Accept': 'application/json'}
+});
+
+if(response.ok){
+status.innerHTML="✅ Message sent successfully!";
+status.style.color="#22c55e";
+form.reset();
+}else{
+status.innerHTML="❌ Oops! Something went wrong.";
+status.style.color="#ef4444";
+}
+
+});
+
+/* Scroll animations */
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
+});
+
+document.querySelectorAll(".fade-section").forEach(section=>{
+observer.observe(section);
+});
+
+</script>
+
+</body>
 </html>
