@@ -510,15 +510,15 @@ Visit My Medium →
 
 <h3>Send a Message</h3>
 
-<form>
+<form action="https://formspree.io/f/meerojlz" method="POST">
 
-<input type="text" placeholder="Your Name">
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Your Email">
+<input type="email" name="email" placeholder="Your Email" required>
 
-<input type="text" placeholder="Subject">
+<input type="text" name="subject" placeholder="Subject">
 
-<textarea placeholder="Tell me about your project or opportunity..."></textarea>
+<textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
 
 <button class="send-btn">Send Message</button>
 
