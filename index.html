@@ -1,115 +1,431 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Brahmaiah Cheerla | DevOps Engineer</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
 body{
 font-family:Arial;
 margin:0;
 background:#0f172a;
 color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
+nav{
+background:#020617;
+padding:15px;
+position:sticky;
+top:0;
 text-align:center;
 }
 
-header{
-background:#1e293b;
-padding:60px;
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-size:14px;
 }
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+background:#020617;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.hero p{
+color:#94a3b8;
+}
+
+/* SECTIONS */
 
 section{
-padding:40px;
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
 }
+
+h2{
+border-left:5px solid #38bdf8;
+padding-left:10px;
+margin-bottom:40px;
+}
+
+/* SKILLS */
 
 .skills span{
-background:#334155;
-padding:10px 20px;
-margin:5px;
-border-radius:20px;
 display:inline-block;
+background:#1e293b;
+padding:12px 22px;
+margin:8px;
+border-radius:30px;
 }
 
-.project{
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARD */
+
+.card{
 background:#1e293b;
-margin:20px;
-padding:20px;
+padding:25px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* TOOLS */
+
+.tools{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.tools img{
+width:70px;
+}
+
+/* IMAGE CENTER */
+
+.center{
+text-align:center;
+}
+
+.center img{
+width:80%;
+max-width:700px;
+}
+
+/* BLOG */
+
+.blog{
+background:#1e293b;
+padding:25px;
 border-radius:10px;
 }
 
+/* CONTACT */
+
+.contact p{
+margin:8px 0;
+}
+
+/* FOOTER */
+
 footer{
 background:#020617;
+text-align:center;
 padding:20px;
+margin-top:40px;
 }
 
 a{
 color:#38bdf8;
+text-decoration:none;
 }
+
 </style>
+
 </head>
 
 <body>
 
-<header>
-<h1>Brahmaiah Cheerla</h1>
-<h3>DevOps Engineer</h3>
-<p>AWS | Linux | Docker | Jenkins | CI/CD</p>
-</header>
+<!-- NAVBAR -->
 
-<section>
+<nav>
+
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#blog">Blog</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Hi, I'm <span>Brahmaiah</span></h1>
+
+<h3>DevOps Engineer</h3>
+
+<p>AWS | Docker | Kubernetes | Jenkins | Terraform | CI/CD</p>
+
+<p>Building scalable infrastructure and automating deployments.</p>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
 <h2>About Me</h2>
+
 <p>
-I am a DevOps enthusiast passionate about cloud infrastructure,
-automation and CI/CD pipelines. I build projects using AWS,
-Linux and modern DevOps tools.
+
+DevOps Engineer experienced in cloud infrastructure, CI/CD pipelines, containerization and Kubernetes deployments.
+
+I specialize in AWS infrastructure automation, Docker containerization, and Kubernetes orchestration while implementing monitoring solutions using Prometheus and Grafana.
+
 </p>
+
 </section>
 
-<section>
+<!-- SKILLS -->
+
+<section id="skills">
+
 <h2>Skills</h2>
+
 <div class="skills">
+
 <span>AWS</span>
 <span>Linux</span>
 <span>Docker</span>
-<span>Git</span>
+<span>Kubernetes</span>
 <span>Jenkins</span>
 <span>Terraform</span>
-<span>CI/CD</span>
+<span>Git</span>
+<span>Prometheus</span>
+<span>Grafana</span>
+<span>SonarQube</span>
+<span>Trivy</span>
+
 </div>
+
 </section>
 
-<section>
+<!-- PROJECTS -->
+
+<section id="projects">
+
 <h2>Projects</h2>
 
-<div class="project">
-<h3>AWS EC2 Apache Deployment</h3>
-<p>Deployed Apache Web Server on AWS EC2.</p>
+<div class="grid">
+
+<div class="card">
+
+<h3>Blood Bank Management System</h3>
+
+<p>
+
+Implemented CI/CD pipeline using Jenkins, Docker containerization, Kubernetes deployment, and security scanning using Trivy and SonarQube.
+
+</p>
+
 </div>
 
-<div class="project">
-<h3>Dockerized Application</h3>
-<p>Containerized a web application using Docker.</p>
+<div class="card">
+
+<h3>CI/CD Automation</h3>
+
+<p>
+
+Automated application build, test, and deployment pipelines using Jenkins, Git, and Maven.
+
+</p>
+
 </div>
 
-<div class="project">
-<h3>Jenkins CI/CD Pipeline</h3>
-<p>Automated application deployment using Jenkins.</p>
+<div class="card">
+
+<h3>AWS Infrastructure Automation</h3>
+
+<p>
+
+Provisioned scalable AWS infrastructure using Terraform including EC2, VPC and RDS.
+
+</p>
+
+</div>
+
 </div>
 
 </section>
 
-<section>
-<h2>Blogs</h2>
-<p>DevOps learning series on Medium.</p>
-</section>
+<!-- DEVOPS ARCHITECTURE -->
 
 <section>
+
+<h2>DevOps Architecture</h2>
+
+<p>
+Example architecture used in my DevOps projects involving Jenkins CI/CD pipelines, Docker containers, Kubernetes orchestration and AWS infrastructure.
+</p>
+
+<div class="center">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Devops-toolchain.svg">
+
+</div>
+
+</section>
+
+<!-- DOCKER WORKFLOW -->
+
+<section>
+
+<h2>Docker Container Workflow</h2>
+
+<p>
+Applications are containerized using Docker ensuring portability and consistent deployment across development, staging and production environments.
+</p>
+
+<div class="center">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg">
+
+</div>
+
+</section>
+
+<!-- CICD -->
+
+<section>
+
+<h2>CI/CD Pipeline</h2>
+
+<p>
+Automated CI/CD pipeline used in my projects where developers push code to Git,
+Jenkins builds the application, Docker images are created, and applications are
+deployed to Kubernetes clusters on AWS.
+</p>
+
+<div style="display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:wrap;margin-top:30px">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="60">
+
+<span>→</span>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" width="60">
+
+<span>→</span>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="60">
+
+<span>→</span>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="60">
+
+<span>→</span>
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="80">
+
+</div>
+
+</section>
+
+<!-- DEVOPS TOOLS -->
+
+<section>
+
+<h2>DevOps Tools</h2>
+
+<div class="tools">
+
+<img src="https://cdn.worldvectorlogo.com/logos/docker.svg">
+<img src="https://cdn.worldvectorlogo.com/logos/kubernetes.svg">
+<img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg">
+<img src="https://cdn.worldvectorlogo.com/logos/jenkins-1.svg">
+<img src="https://cdn.worldvectorlogo.com/logos/terraform-enterprise.svg">
+<img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg">
+
+</div>
+
+</section>
+
+<!-- BLOG -->
+
+<section id="blog">
+
+<h2>DevOps Blog</h2>
+
+<div class="blog">
+
+<h3>Docker Container Running but Not Accessible in Browser</h3>
+
+<p>
+
+Troubleshooting Docker networking issues and resolving container accessibility problems.
+
+</p>
+
+<a href="https://medium.com/@brahmaiahcheerla/docker-container-running-but-not-accessible-in-browser-root-cause-and-fix-54a9cd478e3c" target="_blank">
+
+Read Article →
+
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
 <h2>Contact</h2>
-<p>Email: yourmail@gmail.com</p>
-<p>GitHub: github.com/yourusername</p>
+
+<div class="contact">
+
+<p>Email: brahmaiahcheerla@gmail.com</p>
+
+<p>Mobile: +91 8885386180</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/brahmaiah-cheerla">
+View Profile
+</a>
+</p>
+
+<p>
+GitHub:
+<a href="https://github.com/brahmaiahcheerla01">
+github.com/brahmaiahcheerla01
+</a>
+</p>
+
+</div>
+
 </section>
 
 <footer>
-<p>© 2026 Brahmaiah Cheerla</p>
+
+<p>© Brahmaiah Cheerla | DevOps Engineer</p>
+
 </footer>
 
 </body>
