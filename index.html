@@ -92,6 +92,19 @@ text-decoration:none;
 color:white;
 }
 
+/* scroll animation */
+
+.fade-section{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.fade-section.visible{
+opacity:1;
+transform:translateY(0);
+}
+
 /* SECTIONS */
 
 section{
@@ -291,6 +304,11 @@ background:#020617;
 margin-top:40px;
 }
 
+#form-status{
+margin-top:10px;
+font-size:14px;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -316,7 +334,7 @@ display:none;
 
 </style>
 
-  <script>
+<script>
 
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
@@ -382,7 +400,7 @@ status.style.color = "#ef4444";
 
 </div>
 
-<section id="about">
+<section id="about" class="fade-section">
 
 <h2>About <span>Me</span></h2>
 
@@ -398,7 +416,7 @@ and monitoring systems using Prometheus and Grafana.
 
 </section>
 
-<section id="skills">
+<section id="skills" class="fade-section">
 
 <h2>Skills</h2>
 
@@ -443,7 +461,7 @@ and monitoring systems using Prometheus and Grafana.
 
 </section>
 
-<section id="projects">
+<section id="projects" class="fade-section">
 
 <h2>Projects</h2>
 
@@ -491,8 +509,8 @@ Visit My Medium →
 
 </section>
 
-<section class="connect-section" id="contact">
-
+<section id="contact" class="fade-section">
+  
 <div class="connect-header">
 
 <span class="badge">• Get In Touch</span>
