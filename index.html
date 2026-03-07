@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Brahmaiah Cheerla | DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -16,13 +20,12 @@ font-family:'Poppins',sans-serif;
 }
 
 html{
-scroll-behavior:smooth; /* smooth navigation scrolling */
+scroll-behavior:smooth;
 }
 
 body{
 background:#0b0f1a;
 color:white;
-line-height:1.6;
 }
 
 /* NAVBAR */
@@ -51,7 +54,6 @@ list-style:none;
 nav a{
 color:white;
 text-decoration:none;
-font-size:14px;
 }
 
 /* HERO */
@@ -78,7 +80,16 @@ margin-bottom:10px;
 }
 
 .hero span{
-color:#6ea8ff;
+background:linear-gradient(90deg,#00c6ff,#7f5af0,#00c6ff);
+background-size:200%;
+-webkit-background-clip:text;
+color:transparent;
+animation:gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0%}
+100%{background-position:200%}
 }
 
 .hero p{
@@ -104,61 +115,50 @@ margin:auto;
 
 section h2{
 font-size:32px;
-margin-bottom:30px;
+margin-bottom:40px;
+text-align:center;
 }
 
 section h2 span{
 color:#6ea8ff;
 }
 
-/* SKILLS */
+/* SKILLS + TOOLS GRID */
 
-.skills{
+.grid-cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+gap:25px;
 }
 
-.skill{
-background:#111827;
-padding:15px;
-border-radius:8px;
+.card{
+
+background:#0f172a;
+padding:25px;
+border-radius:12px;
 text-align:center;
+border:1px solid #1e293b;
+transition:all .3s ease;
+
 }
 
-/* MINDSET */
+.card:hover{
 
-.mindset-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.mind-card{
 background:#111827;
-padding:25px;
-border-radius:12px;
+border:1px solid #6ea8ff;
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(110,168,255,0.4);
+
 }
 
-/* EXPERIENCE */
-
-.timeline{
-display:grid;
-grid-template-columns:1fr 60px 1fr;
-align-items:center;
+.card img{
+width:45px;
+margin-bottom:10px;
 }
 
-.timeline-line{
-width:2px;
-height:200px;
-background:#6ea8ff;
-margin:auto;
-}
-
-.timeline-right{
-background:#111827;
-padding:25px;
-border-radius:12px;
+.card p{
+font-size:14px;
+color:#cbd5e1;
 }
 
 /* PROJECTS */
@@ -175,27 +175,6 @@ padding:20px;
 border-radius:10px;
 }
 
-/* TOOLS */
-
-.tools{
-display:flex;
-flex-wrap:wrap;
-gap:25px;
-justify-content:center;
-}
-
-.tools img{
-width:60px;
-}
-
-/* EDUCATION */
-
-.edu-card{
-background:#111827;
-padding:25px;
-border-radius:12px;
-}
-
 /* BLOG */
 
 .blog{
@@ -204,28 +183,10 @@ padding:20px;
 border-radius:12px;
 }
 
-/* CONNECT */
+/* CONTACT */
 
 .connect-section{
 padding:80px 10%;
-background:#0b0f1a;
-}
-
-.connect-header{
-text-align:center;
-margin-bottom:50px;
-}
-
-.connect-header span{
-color:#6ea8ff;
-}
-
-.badge{
-background:#0f172a;
-padding:6px 12px;
-border-radius:20px;
-border:1px solid #1e293b;
-font-size:13px;
 }
 
 .connect-container{
@@ -251,18 +212,6 @@ border-radius:10px;
 margin-top:15px;
 }
 
-.small-btn{
-display:inline-block;
-margin-right:10px;
-padding:8px 14px;
-border-radius:6px;
-background:#111827;
-border:1px solid #1e293b;
-color:white;
-text-decoration:none;
-font-size:13px;
-}
-
 .contact-right input,
 .contact-right textarea{
 width:100%;
@@ -282,11 +231,6 @@ border-radius:8px;
 background:linear-gradient(90deg,#00c6ff,#7f5af0);
 color:white;
 cursor:pointer;
-}
-
-#form-status{
-margin-top:10px;
-font-size:14px;
 }
 
 /* FOOTER */
@@ -324,152 +268,176 @@ gap:10px;
 grid-template-columns:1fr;
 }
 
-.timeline{
-grid-template-columns:1fr;
 }
 
-.timeline-line{
-display:none;
-}
-
-}
 </style>
 </head>
 
 <body>
 
 <nav>
+
 <h2>Brahmaiah</h2>
+
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#tools">Tools</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+
 </nav>
 
 <div class="hero">
+
 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
 <h1>Hi, I'm <span>Brahmaiah</span></h1>
+
 <p>DevOps Engineer | AWS | Docker | Kubernetes | Jenkins</p>
+
 <a href="resume.pdf" class="btn">Download Resume</a>
+
 </div>
 
 <section id="about" class="fade-section">
-<h2>About <span>Me</span></h2>
+
+<h2>About Me</h2>
+
 <p>
-DevOps Engineer experienced in building and managing cloud infrastructure,
-automating CI/CD pipelines, and deploying containerized applications using Docker and Kubernetes.
-Skilled in AWS services, Terraform infrastructure automation, and monitoring systems using Prometheus and Grafana.
+
+DevOps Engineer experienced in building cloud infrastructure,
+CI/CD automation, and containerized deployments using Docker and Kubernetes.
+
 </p>
+
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills" class="fade-section">
+
 <h2>Skills</h2>
-<div class="skills">
-<div class="skill">AWS</div>
-<div class="skill">Linux</div>
-<div class="skill">Docker</div>
-<div class="skill">Kubernetes</div>
-<div class="skill">Jenkins</div>
-<div class="skill">Terraform</div>
-<div class="skill">Git</div>
-<div class="skill">Prometheus</div>
-<div class="skill">Grafana</div>
+
+<div class="grid-cards">
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
+<p>Linux</p>
 </div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+<p>Git</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg">
+<p>Bash</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg">
+<p>Prometheus</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg">
+<p>Grafana</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="fade-section">
-<h2>DevOps <span>Mindset</span></h2>
-<div class="mindset-grid">
-<div class="mind-card"><h3>Automate Everything</h3><p>Eliminate manual processes through automation.</p></div>
-<div class="mind-card"><h3>Infrastructure as Code</h3><p>Manage infrastructure using Terraform.</p></div>
-<div class="mind-card"><h3>Continuous Integration</h3><p>Integrate and deploy frequently.</p></div>
+<!-- TOOLS -->
+
+<section id="tools" class="fade-section">
+
+<h2>Tools & <span>Technologies</span></h2>
+
+<div class="grid-cards">
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
+<p>AWS</p>
 </div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+<p>Docker</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+<p>Kubernetes</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg">
+<p>Jenkins</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg">
+<p>Terraform</p>
+</div>
+
+<div class="card">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+<p>GitHub</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="projects" class="fade-section">
+
 <h2>Projects</h2>
+
 <div class="projects">
+
 <div class="project">
+
 <h3>Blood Bank Management System</h3>
-<p>CI/CD pipeline using Jenkins, Docker containerization and Kubernetes deployment.</p>
-</div>
-</div>
-</section>
 
-<section class="fade-section">
-<h2>Education</h2>
-<div class="edu-card">
-<h3>B.Sc – Mathematics, Electronics & Computer Science</h3>
-<p>Sree Chaitanya Degree College, Kavali</p>
-<p>2019</p>
-</div>
-</section>
+<p>
+CI/CD pipeline using Jenkins, Docker containerization and Kubernetes deployment.
+</p>
 
-<section class="fade-section">
-<h2>Medium</h2>
-<div class="blog">
-<p>I share DevOps tutorials and troubleshooting guides on Medium.</p>
-<a href="https://medium.com/@brahmaiahcheerla" target="_blank">Visit My Medium →</a>
 </div>
+
+</div>
+
 </section>
 
 <section id="contact" class="connect-section fade-section">
 
-<div class="connect-header">
-<span class="badge">• Get In Touch</span>
-<h2>Let’s <span>Connect</span></h2>
-<p>Ready to discuss DevOps solutions or career opportunities? Reach out!</p>
-</div>
+<h2>Let's Connect</h2>
 
 <div class="connect-container">
 
 <div class="contact-left">
 
-<h3>Contact Information</h3>
+<div class="contact-card"><div>Email</div><div>brahmaiahcheerla@gmail.com</div></div>
 
-<div class="contact-card">
-<div>📧</div>
-<div>
-<p>Email</p>
-<span>brahmaiahcheerla@gmail.com</span>
-</div>
-</div>
+<div class="contact-card"><div>LinkedIn</div><div>linkedin.com/in/brahmaiah-cheerla</div></div>
 
-<div class="contact-card">
-<div>💼</div>
-<div>
-<p>LinkedIn</p>
-<span>linkedin.com/in/brahmaiah-cheerla</span>
-</div>
-</div>
-
-<div class="contact-card">
-<div>📞</div>
-<div>
-<p>Phone</p>
-<span>+91 8885386180</span>
-</div>
-</div>
-
-<div style="margin-top:20px">
-<a href="resume.pdf" class="small-btn">Resume</a>
-<a href="https://linkedin.com/in/brahmaiah-cheerla" class="small-btn">LinkedIn</a>
-</div>
+<div class="contact-card"><div>Phone</div><div>+91 8885386180</div></div>
 
 </div>
 
 <div class="contact-right">
 
-<h3>Send a Message</h3>
-
 <form id="contact-form" action="https://formspree.io/f/meerojlz" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
+
 <input type="email" name="email" placeholder="Your Email" required>
-<input type="text" name="subject" placeholder="Subject">
-<textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+
+<textarea name="message" placeholder="Message"></textarea>
 
 <input type="text" name="_gotcha" style="display:none">
 
@@ -486,42 +454,40 @@ Skilled in AWS services, Terraform infrastructure automation, and monitoring sys
 </section>
 
 <footer>
-<p>© 2026 Brahmaiah Cheerla | DevOps Engineer</p>
+
+<p>© 2026 Brahmaiah Cheerla</p>
+
 </footer>
 
 <script>
 
-/* Formspree AJAX submit */
+/* FORM SUBMIT */
 
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
+const form=document.getElementById("contact-form");
+const status=document.getElementById("form-status");
 
-form.addEventListener("submit", async function(e) {
+form.addEventListener("submit",async function(e){
 
 e.preventDefault();
 
-const data = new FormData(form);
+const data=new FormData(form);
 
-const response = await fetch(form.action, {
-method: form.method,
-body: data,
-headers:{ 'Accept': 'application/json'}
+const response=await fetch(form.action,{
+method:form.method,
+body:data,
+headers:{'Accept':'application/json'}
 });
 
 if(response.ok){
-status.innerHTML="✅ Message sent successfully!";
-status.style.color="#22c55e";
+status.innerHTML="Message Sent Successfully!";
 form.reset();
-}else{
-status.innerHTML="❌ Oops! Something went wrong.";
-status.style.color="#ef4444";
 }
 
 });
 
-/* Scroll animations */
+/* SCROLL ANIMATION */
 
-const observer = new IntersectionObserver(entries=>{
+const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.classList.add("visible");
