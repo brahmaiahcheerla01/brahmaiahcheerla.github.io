@@ -102,6 +102,8 @@ background:#6ea8ff;
 border-radius:6px;
 text-decoration:none;
 color:white;
+display:inline-block;
+margin-top:15px;
 }
 
 /* SECTIONS */
@@ -116,10 +118,6 @@ section h2{
 font-size:32px;
 margin-bottom:40px;
 text-align:center;
-}
-
-section h2 span{
-color:#6ea8ff;
 }
 
 /* GRID CARDS */
@@ -184,13 +182,17 @@ padding:20px;
 border-radius:10px;
 }
 
-/* MEDIUM */
+/* MEDIUM FIXED */
 
 .medium-card{
 background:#111827;
-padding:30px;
+padding:40px;
 border-radius:12px;
 text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
 }
 
 /* CONNECT */
@@ -198,14 +200,6 @@ text-align:center;
 .connect-header{
 text-align:center;
 margin-bottom:40px;
-}
-
-.badge{
-background:#0f172a;
-padding:6px 12px;
-border-radius:20px;
-border:1px solid #1e293b;
-font-size:13px;
 }
 
 .connect-container{
@@ -241,12 +235,6 @@ background:#111827;
 border:1px solid #1e293b;
 color:white;
 text-decoration:none;
-}
-
-/* FORM */
-
-.contact-right h3{
-margin-bottom:20px;
 }
 
 .contact-right input,
@@ -324,56 +312,6 @@ grid-template-columns:1fr;
 
 </div>
 
-<section id="about">
-<h2>About Me</h2>
-<p>
-DevOps Engineer experienced in cloud infrastructure, CI/CD automation,
-and containerized deployments using Docker and Kubernetes.
-</p>
-</section>
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="grid-cards">
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"><p>Linux</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><p>Git</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"><p>Bash</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"><p>Prometheus</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"><p>Grafana</p></div>
-
-</div>
-
-</section>
-
-<section id="tools">
-
-<h2>Tools & <span>Technologies</span></h2>
-
-<div class="grid-cards">
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><p>AWS</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><p>Kubernetes</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"><p>Jenkins</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"><p>Terraform</p></div>
-
-<div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><p>GitHub</p></div>
-
-</div>
-
-</section>
-
 <section id="pipeline">
 
 <h2>DevOps Pipeline</h2>
@@ -381,38 +319,22 @@ and containerized deployments using Docker and Kubernetes.
 <div class="pipeline">
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+
 <span>→</span>
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg">
+
 <span>→</span>
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+
 <span>→</span>
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg">
+
 <span>→</span>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="project">
-
-<h3>Blood Bank Management System</h3>
-
-<p>
-CI/CD pipeline using Jenkins, Docker containerization and Kubernetes deployment.
-</p>
-
-</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg">
 
 </div>
 
@@ -429,58 +351,6 @@ CI/CD pipeline using Jenkins, Docker containerization and Kubernetes deployment.
 <a href="https://medium.com/@brahmaiahcheerla" target="_blank" class="btn">
 Visit My Medium
 </a>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="connect-header">
-
-<span class="badge">● Get In Touch</span>
-
-<h2>Let’s <span>Connect</span></h2>
-
-<p>Ready to discuss DevOps solutions or career opportunities? Reach out!</p>
-
-</div>
-
-<div class="connect-container">
-
-<div class="contact-left">
-
-<h3>Contact Information</h3>
-
-<div class="contact-card"><div>Email</div><div>brahmaiahcheerla@gmail.com</div></div>
-
-<div class="contact-card"><div>LinkedIn</div><div>linkedin.com/in/brahmaiah-cheerla</div></div>
-
-<div class="contact-card"><div>Phone</div><div>+91 8885386180</div></div>
-
-<a href="resume.pdf" class="small-btn">Resume</a>
-
-<a href="https://linkedin.com/in/brahmaiah-cheerla" class="small-btn">LinkedIn</a>
-
-</div>
-
-<div class="contact-right">
-
-<h3>Send Message</h3>
-
-<form action="https://formspree.io/f/meerojlz" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="email" name="email" placeholder="Your Email" required>
-
-<textarea name="message" placeholder="Message"></textarea>
-
-<button class="send-btn">Send Message</button>
-
-</form>
-
-</div>
 
 </div>
 
