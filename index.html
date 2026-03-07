@@ -255,6 +255,144 @@ opacity:1;
 transform:translateY(0);
 }
 
+
+.connect-section{
+padding:80px 10%;
+background:#0b0f1a;
+}
+
+.connect-header{
+text-align:center;
+margin-bottom:50px;
+}
+
+.connect-header h2{
+font-size:36px;
+margin-top:10px;
+}
+
+.connect-header span{
+color:#6ea8ff;
+}
+
+.badge{
+background:#0f172a;
+padding:6px 12px;
+border-radius:20px;
+border:1px solid #1e293b;
+font-size:13px;
+}
+
+/* GRID */
+
+.connect-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* LEFT SIDE */
+
+.contact-left{
+background:#0f172a;
+padding:25px;
+border-radius:12px;
+border:1px solid #1e293b;
+}
+
+.contact-card{
+display:flex;
+align-items:center;
+gap:15px;
+background:#020617;
+padding:15px;
+border-radius:10px;
+margin-top:15px;
+}
+
+.contact-card p{
+font-size:12px;
+color:#9ca3af;
+}
+
+.contact-card span{
+font-size:14px;
+}
+
+.icon{
+font-size:20px;
+}
+
+.quick-links{
+margin-top:25px;
+}
+
+.small-btn{
+display:inline-block;
+margin-right:10px;
+padding:8px 14px;
+border-radius:6px;
+background:#111827;
+border:1px solid #1e293b;
+color:white;
+text-decoration:none;
+font-size:13px;
+}
+
+/* RIGHT SIDE */
+
+.contact-right{
+background:#0f172a;
+padding:25px;
+border-radius:12px;
+border:1px solid #1e293b;
+}
+
+.contact-right label{
+font-size:13px;
+color:#9ca3af;
+}
+
+.contact-right input,
+.contact-right textarea{
+width:100%;
+padding:10px;
+margin:8px 0 15px;
+background:#020617;
+border:1px solid #1e293b;
+border-radius:6px;
+color:white;
+}
+
+.contact-right textarea{
+height:110px;
+}
+
+.send-btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:linear-gradient(90deg,#00c6ff,#7f5af0);
+color:white;
+cursor:pointer;
+}
+
+#form-status{
+margin-top:10px;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.connect-container{
+grid-template-columns:1fr;
+}
+
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -411,33 +549,90 @@ CI/CD pipeline using Jenkins, Docker containerization and Kubernetes deployment.
 
 </div>
 
-</section>
+<section class="connect-section fade-section" id="contact">
 
-<section id="contact" class="connect-section fade-section">
+<div class="connect-header">
 
-<h2>Let's Connect</h2>
+<span class="badge">● Get In Touch</span>
 
-<div class="connect-container">
+<h2>Let’s <span>Connect</span></h2>
 
-<div class="contact-left">
-
-<div class="contact-card"><div>Email</div><div>brahmaiahcheerla@gmail.com</div></div>
-
-<div class="contact-card"><div>LinkedIn</div><div>linkedin.com/in/brahmaiah-cheerla</div></div>
-
-<div class="contact-card"><div>Phone</div><div>+91 8885386180</div></div>
+<p>Ready to discuss DevOps solutions or career opportunities? Reach out!</p>
 
 </div>
 
+<div class="connect-container">
+
+<!-- LEFT CONTACT INFO -->
+
+<div class="contact-left">
+
+<h3>Contact Information</h3>
+
+<div class="contact-card">
+
+<div class="icon">📧</div>
+
+<div>
+<p>Email</p>
+<span>brahmaiahcheerla@gmail.com</span>
+</div>
+
+</div>
+
+<div class="contact-card">
+
+<div class="icon">💼</div>
+
+<div>
+<p>LinkedIn</p>
+<span>linkedin.com/in/brahmaiah-cheerla</span>
+</div>
+
+</div>
+
+<div class="contact-card">
+
+<div class="icon">📞</div>
+
+<div>
+<p>Phone</p>
+<span>+91 8885386180</span>
+</div>
+
+</div>
+
+<div class="quick-links">
+
+<h4>Quick Links</h4>
+
+<a href="resume.pdf" class="small-btn">Resume</a>
+
+<a href="https://linkedin.com/in/brahmaiah-cheerla" class="small-btn">LinkedIn</a>
+
+</div>
+
+</div>
+
+<!-- RIGHT CONTACT FORM -->
+
 <div class="contact-right">
+
+<h3>Send a Message</h3>
 
 <form id="contact-form" action="https://formspree.io/f/meerojlz" method="POST">
 
-<input type="text" name="name" placeholder="Your Name" required>
+<label>Your Name</label>
+<input type="text" name="name" placeholder="John Doe" required>
 
-<input type="email" name="email" placeholder="Your Email" required>
+<label>Your Email</label>
+<input type="email" name="email" placeholder="john@example.com" required>
 
-<textarea name="message" placeholder="Message"></textarea>
+<label>Subject</label>
+<input type="text" name="subject" placeholder="DevOps Opportunity">
+
+<label>Message</label>
+<textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
 
 <input type="text" name="_gotcha" style="display:none">
 
@@ -452,7 +647,6 @@ CI/CD pipeline using Jenkins, Docker containerization and Kubernetes deployment.
 </div>
 
 </section>
-
 <footer>
 
 <p>© 2026 Brahmaiah Cheerla</p>
